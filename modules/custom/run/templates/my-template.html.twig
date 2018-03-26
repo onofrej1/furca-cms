@@ -1,0 +1,24 @@
+sablona
+<div id="hello-world-app">
+      <h1>{{ msg }}</h1>
+    </div>
+
+    {{ msg }}
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.min.js"></script>
+
+    <script>      
+
+console.log('vue');
+      new Vue({
+        el: "#hello-world-app",
+        data() {
+          return {
+            msg: "Hello World!"
+          }
+        }
+      }); 
+          
+    </script>
+
+    

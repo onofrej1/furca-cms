@@ -1,0 +1,5 @@
+name: 'run'
+type: module
+description: 'Run database'
+core: 8.x
+package: 'Custom'

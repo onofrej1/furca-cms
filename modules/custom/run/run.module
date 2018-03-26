@@ -1,0 +1,66 @@
+<?php
+
+/**
+ * @file
+ * Contains run.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function run_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the run module.
+    case 'help.page.run':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Run database') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+
+function run_schema() {
+  $schema['runner'] = array(
+    'description' => 'Stores example person entries for demonstration purposes.',
+    'fields' => array(      
+      'id' => array(
+        'type' => 'int',
+        'not null' => TRUE,        
+        'description' => 'Id field.',
+      ),
+      'name' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+        'description' => 'Name of the person.',
+      ),      
+      'age' => array(
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+        'size' => 'tiny',
+        'description' => 'The age of the person in years.',
+      ),
+    ),
+    'primary key' => array('id'),    
+  );
+
+  return $schema;
+}
+
+
+function run_theme($existing, $type, $theme, $path) {
+  return [
+    'my_template' => [
+      'variables' => ['test_var' => NULL],
+    ]
+  ];
+}
+
+

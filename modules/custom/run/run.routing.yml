@@ -1,0 +1,18 @@
+
+run.runner_controller_index:
+  path: '/run/index'
+  defaults:
+    _controller: '\Drupal\run\Controller\RunnerController::index'
+    _title: 'index'
+  requirements:
+    _permission: 'access content'
+  options:
+    _admin_route: TRUE
+
+run.runner_controller_create:
+  path: '/run/new'
+  defaults:
+    _controller: '\Drupal\run\Controller\RunnerController::new'
+    _title: 'new'
+  requirements:
+    _permission: 'access content'

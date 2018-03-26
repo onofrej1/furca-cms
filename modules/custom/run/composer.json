@@ -1,0 +1,14 @@
+{
+  "name": "drupal/run",
+  "type": "drupal-module",
+  "description": "Run database",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/run",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/run",
+    "source": "http://cgit.drupalcode.org/run"
+  },
+  "require": { }
+}

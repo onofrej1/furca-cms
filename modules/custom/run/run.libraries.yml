@@ -1,0 +1,10 @@
+vue:
+  js:
+    //cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.min.js: { type: external, minified: true }
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
+test:
+  js:
+    js/test.js: {}
