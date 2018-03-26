@@ -1,10 +1,30 @@
-vue:
+test:
+  css:
+    theme:      
+      https://unpkg.com/react-table@latest/react-table.css: {type: external}
   js:
-    //cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.min.js: { type: external, minified: true }
+    js/dist/test.js: {}
   dependencies:
+    - run/vue
+    - run/react
     - core/jquery
     - core/drupal
-    - core/drupalSettings
-test:
+    - core/drupalSettings    
+
+vue:
   js:
-    js/test.js: {}
+    js/vue.js: { }
+
+admin:
+  css:
+    theme:
+      js/admin/build/static/css/main.css: {}      
+  js:
+    #js/admin/src/index.js: { }
+    js/admin/build/static/js/main.js: { }
+
+react:
+  js:
+    https://fb.me/react-15.0.1.js: {type: external}
+    https://fb.me/react-dom-15.0.1.js: {type: external}
+    https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js: {type: external}

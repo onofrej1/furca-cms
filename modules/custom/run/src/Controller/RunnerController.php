@@ -23,7 +23,7 @@ class RunnerController extends ControllerBase {
       '#attached' => array(
         'library' => array(
           'run/test',
-          'run/vue'
+          //'run/admin'
         ),
       ),      
     ];
